@@ -1,0 +1,88 @@
+<div data-role="page" id="profile_page" data-theme="c">
+	<div data-role="header" class="astfone_header" data-theme="b" data-position="fixed">
+		<a href="more.html"style="color:white;z-index:34" class="header_btn"> Back </a>
+		<h1>Profile</h1>
+	</div>
+	<div data-role="content" data-theme="c">
+		<form id="profile_form" name="profile_form" action="profile.html" method="post">
+		<div  id="profile_content"></div>
+	<script id="profile_script" type="text/template">
+		<ul data-role="listview" data-inset="true" data-theme="d">
+			<li data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:30%;">
+						<label for="UserName">Name</label>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<input type="text" data-theme="c" style="width:93%; " name="UserName" id="UserName" value="<%= profileData.UserName%>" class="" />
+					</div>
+				</div>
+			</li>
+			<li data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:30%;">
+						<label for="Email">Email</label>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<input type="email" data-theme="c" style="width:93%;" name="Email" id="Email" value="<%= profileData.Email%>" class="" />
+					</div>
+				</div>
+			</li>
+			<li data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:30%;">
+						<label for="Phone">Phone</label>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<input type="tel" data-theme="c" style="width:93%; " name="Phone" id="Phone" value="<%= profileData.Phone%>" class="" />
+					</div>
+				</div>
+			</li>
+			<li data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:30%;">
+						<label for="Country">Country</label>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<input type="text" data-theme="c" style="width:93%;" name="Country" id="Country" value="<%= profileData.Country%>" class="" />
+					</div>
+				</div>
+			</li>
+			<li data-role="fieldcontain">
+				<div class="ui-grid-a">
+					<div class="ui-block-a" style="width:30%;">
+						<label for="Balance">Balance</label>
+					</div>
+					<div class="ui-block-b" style="width:70%;">
+						<input type="text" data-theme="c" style="width:93%;" name="Balance" id="Balance" value="<%= profileData.Balance%>" class="" />
+					</div>
+				</div>
+			</li>
+		</ul>
+		<a href="#" id= "submitProfile" data-role="button" class="astfone_button">Submit</a>
+	</script>
+</form>
+	</div>
+	<div data-role="footer" data-id="mainFooter" data-position="fixed">
+		<div data-role="navbar" data-theme="a"
+		style="height: inherit !important;">
+			<ul>
+				<li>
+					<a href="#" id="dialer_tab"><img class="dialer_img" src="../../../assets/images/dialet-1.png" style="width:40px; height:40px;"/></a>
+				</li>
+				<li>
+					<a href="../../recents/view/recents.html" id="recents_tab"><img class="recents_img" src="../../../assets/images/recents-1.png" style="width:40px; height:40px;"/></a>
+				</li>
+				<li>
+					<a href="#" id="contacts_tab"><img src="../../../assets/images/contacts-1.png" class="contacts_img" style="width:40px; height:40px;"/></a>
+				</li>
+				<li>
+					<a href="#" id="chats_tab"><img src="../../../assets/images/chats-1.png" class="chats_img" style="width:40px; height:40px;"/></a>
+				</li>
+				<li>
+					<a href="more.html" id="more_tab" class="ui-btn-active"><img class="more_img" src="../../../assets/images/more.png" style="width:40px; height:40px;"/></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

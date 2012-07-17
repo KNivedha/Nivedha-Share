@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Assignment</title>
+<link rel="stylesheet"
+	href="../../../assets/css/jquery.mobile-1.1.0.css" />
+<link rel="stylesheet" href="../../../assets/css/custom.css" />
+<script src="../../../assets/js/lib/jquery-1.6.4.js">
+	
+</script>
+<script src="../../../assets/js/lib/jquery.mobile-1.1.0.js">
+	
+</script>
+<script src="../../../assets/js/lib/underscore-min.js">
+	
+</script>
+<script src="../../../assets/js/lib/spine.js">
+	
+</script>
+
+<script src="../../utilities/config.js">
+</script>
+
+<script src="../model/employeemodel.js">	
+</script>
+
+<script src="../controller/settingscontroller.js">	
+</script>
+
+<script src="../../admin/controller/adminconroller.js">	
+</script>
+
+<script src="../../user/controller/usercontroller.js">	
+</script>
+
+<script type="text/javascript">
+	
+	$('#login_page').live('pageinit', function(){
+		if(assignment.userControllerObject===undefined||assignment.userControllerObject===null){
+			//('null');
+          assignment.userControllerObject = new assignment.controllers.UserController();
+          }                           
+		
+		if(assignment.settingsControllerObject===undefined||assignment.settingsControllerObject===null){
+			//alert('null');
+          assignment.settingsControllerObject = new assignment.controllers.SettingsController();
+          }   
+          if(assignment.adminControllerObject===undefined||assignment.adminControllerObject===null){
+			//alert('null');
+          assignment.adminControllerObject = new assignment.controllers.AdminController();
+          }                        
+		
+		
+	});
+</script>
+
+
+</head>
+<body>
+
+	<div data-role="page" id="login_page" data-theme="b" >
+		<div data-role="header" data-theme="b" data-position="fixed" align="center"><h1>Employee Portal</h1></div>
+		<div data-role="content" style="" align="center" data-theme="b" id="loginContent">
+			
+			
+    <input type="text" name="username" id="username" value="TestAdmin" placeholder="Username" style="width: 50%;"  /><br>
+    
+   
+    <input type="password" name="pwd" id="pwd" value="TestAdmin" placeholder="Password" style="width:50%;"  /><br>
+    
+    
+<select name="role_type" id="role_type" data-native-menu="false" data-theme="a" data-inline="true">
+	<option data-placeholder="true" value="Select Role Type">Select Role Type</option>
+   <option value="Admin" selected="selected">Admin</option>
+   <option value="User" >User</option>
+</select>
+
+<br>
+<br>
+<a href="#" data-role="button" data-inline="true" data-theme="a" id="loginBtn">Login</a>
+    
+    
+		</div>
+	</div>
+
+</body>
+</html>

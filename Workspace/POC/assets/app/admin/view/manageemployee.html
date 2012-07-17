@@ -1,0 +1,174 @@
+<div data-role="page" id="manageEmployeePage" >
+	<div data-role="header" data-theme="b" data-position="fixed" align="center">
+		<a href="" data-icon="back" class="ui-btn-left logoutBtn" data-theme="a" id="adminLogoutBtn">Logout</a>
+		<a href="" data-icon="delete" class="ui-btn-right" data-theme="a" id="adminDeleteBtn">Delete</a>
+		<a href="" data-icon="delete" class="ui-btn-right" data-theme="a" style="display:none;" id="adminCancelDeleteBtn">Cancel</a>
+		<a href="" data-icon="arrow-l" class="ui-btn-left" data-theme="a" style="display:none;" id="adminSearchBackBtn">Back</a>
+		<h1>Manage Employee</h1>
+	</div>
+	<div data-role="content" style="" align="center">
+
+		<div id="adminWelcomeMsg">
+			<p>
+				Welcome Admin
+			</p>
+			<p>
+				You have entered Employee Service Portal.
+			</p>
+			<p>
+				You can manage the employee details here with the various options available
+			</p>
+
+		</div>
+		<br>
+		<br>
+
+		<div id="searchEmployee" style="display: none;">
+			<select name="searchType" id="searchType" data-native-menu="false" data-theme="a" data-inline="true" >
+				<option data-placeholder="true" value="Select Search Type">ST</option>
+				<option value="FirstName">First Name</option>
+				<option value="LastName">Last Name</option>
+				<option value="EmployeeID">Employee ID</option>
+			</select>
+<br>
+			<input type="search" />
+		</div>
+
+		<div id="employeeList">
+			<div class="ui-grid-c" style="">
+				<div class="ui-block-a" style="width: 25%;padding-top: 8px !important; padding-left:2px; padding-bottom:8px !important; ">
+					<div style="float:left;">
+						<select name="sortType" id="sortType" data-native-menu="false" data-theme="a" >
+				<option data-placeholder="true" value="Select Sort Type">Sot</option>
+				<option value="FirstName">First Name</option>
+				<option value="EmployeeID">Employee ID</option>
+			</select>
+
+					</div>
+				</div>
+				
+				<div class="ui-block-b" style="width: 25%;padding-top: 8px !important; padding-bottom:8px !important; ">
+					<div >
+						<select name="sortOrder" id="sortOrder" data-native-menu="false" data-theme="a" >
+				<option data-placeholder="true" value="Select Sort Order">So</option>
+				<option value="Ascending">Ascending</option>
+				<option value="Descending">Descending</option>
+			</select>
+						
+					</div>
+				</div>
+				
+				<div class="ui-block-c" style="width: 25%;">
+					<div >
+						<a href="" data-role="button" data-inline="true" data-theme="a" id="sortBtn">SE</a>
+					</div>
+				</div>
+				<div class="ui-block-d" style="width: 25%;">
+					<div style="float:right;">
+						<a href="" data-role="button" data-inline="true" data-theme="a" id="searchBtn">SeE</a>
+					</div>
+				</div>
+
+			</div>
+			
+			<div id="employeeManageList">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">
+						<div class="ui-grid-b" style="">
+							<div class="ui-block-a" style="float: left; ">
+								<div style="padding-top: 8px; padding-bottom: 8px;">Employee ID</div>
+								
+							</div>
+							<div class="ui-block-b" align="center" style="">
+								<div style="padding-top: 8px; padding-bottom: 8px;">Employee Name</div>
+								
+							</div>
+							<div class="ui-block-c" style="float: right !important; text-align:right; ">
+								<div style="padding-top: 8px; padding-bottom: 8px;">Date of Joining</div>
+								
+								
+							</div> 
+						</div>
+						
+						
+					</li>
+					<li class="empDet">
+						<div class="ui-grid-b" style="">
+							<div class="ui-block-a" style="float: left; ">
+								<div class="idDiv" style="padding-top: 8px; padding-bottom: 8px;">6009008</div>
+								
+							</div>
+							<div class="ui-block-b" align="center" style="">
+								<div class="nameDiv" style="padding-top: 8px; padding-bottom: 8px;">Nivedha Kaliaperumal</div>
+							</div>
+							<div class="ui-block-c" style="float: right !important; text-align:right;">
+								<div class="dojDiv" style=" padding-top: 8px; padding-bottom: 8px;">15/10/2010</div>
+								<div align="right" class="deleteDiv" style="display:none;"> <a href="" data-mini="true" data-role="button" data-icon="delete" data-iconpos="notext" id="deleteBtn">Delete</a></div>
+								
+							</div> 
+						</div>
+						
+						
+					</li>
+					<li class="empDet">
+						<div class="ui-grid-b" style="">
+							<div class="ui-block-a" style="float: left; ">
+								<div class="idDiv" style="padding-top: 8px; padding-bottom: 8px;">6009008</div>
+								
+							</div>
+							<div class="ui-block-b" align="center" style="">
+								<div class="nameDiv" style="padding-top: 8px; padding-bottom: 8px;">Nivedha Kaliaperumal</div>
+							</div>
+							<div class="ui-block-c" style="float: right !important; text-align:right;">
+								<div class="dojDiv" style=" padding-top: 8px; padding-bottom: 8px;">15/10/2010</div>
+								<div align="right" class="deleteDiv" style="display:none;"> <a href="" data-mini="true" data-role="button" data-icon="delete" data-iconpos="notext" id="deleteBtn">Delete</a></div>
+								
+							</div> 
+						</div>
+						
+						
+					</li>
+					
+<li class="empDet">
+						<div class="ui-grid-b" style="">
+							<div class="ui-block-a" style="float: left; ">
+								<div class="idDiv" style="padding-top: 8px; padding-bottom: 8px;">6009008</div>
+								
+							</div>
+							<div class="ui-block-b" align="center" style="">
+								<div class="nameDiv" style="padding-top: 8px; padding-bottom: 8px;">Nivedha Kaliaperumal</div>
+							</div>
+							<div class="ui-block-c" style="float: right !important; text-align:right;">
+								<div class="dojDiv" style=" padding-top: 8px; padding-bottom: 8px;">15/10/2010</div>
+								<div align="right" class="deleteDiv" style="display:none;"> <a href="" data-mini="true" data-role="button" data-icon="delete" data-iconpos="notext" id="deleteBtn">Delete</a></div>
+								
+							</div> 
+						</div>
+						
+						
+					</li>
+					<li class="empDet">
+						<div class="ui-grid-b" style="">
+							<div class="ui-block-a" style="float: left; ">
+								<div class="idDiv" style="padding-top: 8px; padding-bottom: 8px;">6009008</div>
+								
+							</div>
+							<div class="ui-block-b" align="center" style="">
+								<div class="nameDiv" style="padding-top: 8px; padding-bottom: 8px;">Nivedha Kaliaperumal</div>
+							</div>
+							<div class="ui-block-c" style="float: right !important; text-align:right;">
+								<div class="dojDiv" style=" padding-top: 8px; padding-bottom: 8px;">15/10/2010</div>
+								<div align="right" class="deleteDiv" style="display:none;"> <a href="" data-mini="true" data-role="button" data-icon="delete" data-iconpos="notext" id="deleteBtn">Delete</a></div>
+								
+							</div> 
+						</div>
+						
+						
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+
+	</div>
+</div>
